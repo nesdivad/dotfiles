@@ -12,7 +12,7 @@ then
 	mkdir ~/.config/nvim
 fi
 
-if [ -f ~/.config/nvim/init.lua; ] 
+if [ -f ~/.config/nvim/init.lua ] 
 then
 	echo "init.lua already exists at path ~/.config/nvim/init.lua ..."
 	echo "Please copy `init.lua` into the directory manually."
@@ -21,6 +21,13 @@ else
 	ln ./init.lua ~/.config/nvim/init.lua
 fi
 
+if ! [ -d ~/.config/nvim/lua ]
+then
+	echo "creating lua directory ..."
+	mkdir ~/.config/nvim/lua
+fi
+
+ln -s lua/*.lua ~/.config/nvim/lua
 
 # Install Vim Plug
 
