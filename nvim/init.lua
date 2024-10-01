@@ -1,4 +1,5 @@
 local vim = vim
+
 local Plug = vim.fn['plug#']
 
 vim.g.loaded_netrw = 1
@@ -17,3 +18,5 @@ vim.call('plug#end')
 require("nvim-tree").setup()
 
 require("keymap")
+
+require'lspconfig'.pyright.setup{}

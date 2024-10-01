@@ -40,3 +40,11 @@ echo "Vim plug installation finished!"
 echo "Installing plugins ..."
 nvim --headless +PlugInstall +qa
 echo "Plugins installed!"
+
+# Install lsp-config
+
+echo "Installing lsp-config ..."
+git clone https://github.com/neovim/nvim-lspconfig ~/.config/nvim/pack/nvim/start/nvim-lspconfig
+
+echo "Installing pyright globally with npm ..."
+npm i -g pyright@1.1.382
