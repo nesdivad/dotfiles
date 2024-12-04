@@ -1,0 +1,37 @@
+{
+    "git.confirmSync": false,
+    "explorer.confirmDragAndDrop": false,
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "editor.unicodeHighlight.allowedCharacters": {
+        " ": true
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.minimap.enabled": false,
+    "editor.cursorStyle": "block",
+    "editor.cursorSurroundingLines": 4,
+    "editor.cursorBlinking": "blink",
+    "editor.find.cursorMoveOnType": true,
+    "editor.fontFamily": "IBM Plex Mono",
+    "editor.fontSize": 14,
+    "editor.lineHeight": 1.25,
+    "editor.suggest.localityBonus": true,
+    "editor.suggest.insertMode": "insert",
+    "editor.suggest.filterGraceful": false,
+    "editor.inlayHints.maximumLength": 24,
+    "[csharp]": {
+        "editor.maxTokenizationLineLength": 2500,
+        "editor.bracketPairColorization.enabled": false,
+        "breadcrumbs.showClasses": true,
+        "breadcrumbs.showFields": true,
+        "diffEditor.wordWrap": "on",
+        "diffEditor.ignoreTrimWhitespace": false
+    },
+    "window.zoomLevel": 2.5,
+    "window.customTitleBarVisibility": "windowed",
+    "workbench.colorTheme": "j_blow"
+}
