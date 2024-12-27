@@ -1,0 +1,3 @@
+Insert at end of line: G+o
+Search and replace: '/<text>' or '?<text>', go to text and type 'cgn'
+

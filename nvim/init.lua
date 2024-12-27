@@ -5,4 +5,3 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 vim.tabstop = 4
 vim.shiftwidth = 4
-vim.opt.termguicolors = true

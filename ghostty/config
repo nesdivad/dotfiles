@@ -1,0 +1,12 @@
+background = 112033
+font-size = 24
+window-width = 206
+window-height = 106
+selection-invert-fg-bg = true
+cursor-style = block
+copy-on-select = true
+clipboard-paste-protection = true
+quick-terminal-animation-duration = 0
+window-padding-y = 0,40
+macos-titlebar-style = hidden
+macos-non-native-fullscreen = true
