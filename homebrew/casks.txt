@@ -1,0 +1,4 @@
+firefox
+ghostty
+the-unarchiver
+zed
