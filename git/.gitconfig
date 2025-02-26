@@ -1,0 +1,35 @@
+[user]
+	email = 88896307+nesdivad@users.noreply.github.com
+	name = Kristoffer Davidsen
+[column]
+	ui = auto
+[branch]
+	sort = committerdate
+[tag]
+	sort = version:refname
+[init]
+	defaultBranch = main
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	renames = true
+	mnemonicPrefix = true
+[push]
+	autoSetupRemote = true
+	followTags = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[help]
+	autoCorrect = prompt
+[commit]
+	verbose = true
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
+[merge]
+	conflictStyle = zdiff3
+[pull]
+	rebase = true
