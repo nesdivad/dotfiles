@@ -10,3 +10,4 @@ quick-terminal-animation-duration = 0
 window-padding-y = 0,40
 macos-titlebar-style = hidden
 macos-non-native-fullscreen = true
+font-family = "IBM Plex Mono"

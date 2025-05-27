@@ -17,8 +17,8 @@
     "editor.cursorBlinking": "blink",
     "editor.find.cursorMoveOnType": true,
     "editor.fontFamily": "IBM Plex Mono",
-    "editor.fontSize": 14,
-    "editor.lineHeight": 1.25,
+    "editor.fontSize": 15,
+    "editor.lineHeight": 1.2,
     "editor.suggest.localityBonus": true,
     "editor.suggest.insertMode": "insert",
     "editor.suggest.filterGraceful": false,
@@ -31,7 +31,8 @@
         "diffEditor.wordWrap": "on",
         "diffEditor.ignoreTrimWhitespace": false
     },
-    "window.zoomLevel": 2,
+    "window.zoomLevel": 2.25,
     "window.customTitleBarVisibility": "windowed",
-    "workbench.colorTheme": "j_blow"
+    "workbench.colorTheme": "Visual Studio 2017 Light - C++",
+    "python.analysis.typeCheckingMode": "standard"
 }
