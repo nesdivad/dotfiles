@@ -58,8 +58,8 @@ require("lazy").setup({
                                 ["ac"] = "@class.outer",
                                 ["ic"] = { query = "@class.inner", desc = "Select inner part of a class region" },
                                 ["as"] = { query = "@local.scope", query_group = "locals", desc = "Select language scope" },
-                                ["bi"] = "@block.inner",
-                                ["bo"] = "@block.outer",
+                                ["ib"] = "@block.inner",
+                                ["ob"] = "@block.outer",
                             },
                             selection_modes = {
                                 ['@parameter.outer'] = 'v', -- charwise
@@ -72,11 +72,29 @@ require("lazy").setup({
                 }
             end
         },
+        { "nvim-treesitter/nvim-treesitter-textobjects" },
         {
-            "nvim-treesitter/nvim-treesitter-textobjects"
-        }
-    },
+            "mason-org/mason.nvim",
+            opts = {}
+        },
+        {
+            "mason-org/mason-lspconfig.nvim",
+            opts = {
+                ensure_installed = { "csharp-ls" },
+            },
+            dependencies = {
+                { "mason-org/mason.nvim", opts = {} },
+                {   
+                    "neovim/nvim-lspconfig", 
+                    opts = {},
+                    config = function()
 
+                    end
+                }
+            },
+        },
+    },
     install = { colorscheme = { "habamax" } },
     checker = { enabled = true },
 })
+

@@ -23,3 +23,4 @@ vim.opt.ignorecase = true
 require("config.lazy")
 
 vim.g.mapleader = " "
+
