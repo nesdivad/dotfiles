@@ -22,6 +22,4 @@ vim.opt.ignorecase = true
 
 require("config.lazy")
 
-vim.g.mapleader = " "
-
-vim.diagnostic.config({ virtual_text = true })
+vim.diagnostic.config({ virtual_lines = true })

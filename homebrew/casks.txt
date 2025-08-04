@@ -2,3 +2,4 @@ firefox
 ghostty
 the-unarchiver
 zed
+docker-desktop

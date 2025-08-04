@@ -1,10 +1,9 @@
-dotnet
 git-lfs
 go
 jq
 neovim
 node
 python@3.13
-sl
 tmux
 uv
+docker
