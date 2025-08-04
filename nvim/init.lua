@@ -24,3 +24,4 @@ require("config.lazy")
 
 vim.g.mapleader = " "
 
+vim.diagnostic.config({ virtual_text = true })

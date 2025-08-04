@@ -80,7 +80,7 @@ require("lazy").setup({
         {
             "mason-org/mason-lspconfig.nvim",
             opts = {
-                ensure_installed = { "csharp-ls" },
+                ensure_installed = { "csharp_ls" },
             },
             dependencies = {
                 { "mason-org/mason.nvim", opts = {} },
