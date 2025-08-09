@@ -20,7 +20,5 @@ vim.opt.inccommand = "split"
 
 vim.opt.ignorecase = true
 
-vim.diagnostic.config({ virtual_lines = true })
-
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
