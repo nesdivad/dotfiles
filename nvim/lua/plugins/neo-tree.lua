@@ -24,6 +24,12 @@ return {
                         require("neo-tree.command").execute({ action = "close" })
                     end
                 }
+            },
+            filesystem = {
+               filtered_items = {
+                   visible = true,
+                   hide_gitignored = true,
+               } 
             }
         },
     }
