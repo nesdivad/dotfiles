@@ -9,6 +9,20 @@ return {
         },
         lazy = false, -- neo-tree will lazily load itself
         opts = {
+            sources = {
+                "filesystem", "buffers", "git_status",
+            },
+            source_selector = {
+                winbar = true,
+                content_layout = "center",
+                tabs_layout = "equal",
+                show_separator_on_edge = true,
+                sources = {
+                    { source = "filesystem" },
+                    { source = "buffers" },
+                    { source = "git_status" },
+                }
+            },
             enable_git_status = true,
             enable_diagnostics = true,
             file_size = {
@@ -28,8 +42,19 @@ return {
             filesystem = {
                filtered_items = {
                    visible = true,
+                   hide_dotfiles = false,
                    hide_gitignored = true,
+                   hide_by_name = {
+                       "__pycache__"
+                   },
+                   always_show_by_pattern = {
+                       ".env*"
+                   }
                } 
+            },
+            follow_current_file = {
+                enabled = true,
+                leave_dirs_open = false,
             }
         },
     }

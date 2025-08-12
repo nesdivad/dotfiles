@@ -12,3 +12,8 @@ Incremental selection:
 - increment scope: '<Leader>sc'
 
 Indent: '=%', indents scope(?)
+
+
+
+# Neotree
+Switch between winbar tabs: < (go left), > (go right)
