@@ -13,7 +13,8 @@ Incremental selection:
 
 Indent: '=%', indents scope(?)
 
-
-
 # Neotree
 Switch between winbar tabs: < (go left), > (go right)
+
+# Macros
+- '@o': Insert newline, exit insert mode and go one line up
