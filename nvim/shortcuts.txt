@@ -18,3 +18,9 @@ Switch between winbar tabs: < (go left), > (go right)
 
 # Macros
 - '@o': Insert newline, exit insert mode and go one line up
+
+# Visual mode
+
+- 'vi(': highlight parentheses group: Visual-inner-(
+    - Can do with (, [, { and much else 
+- 'ci(': change parentheses group: Change-inner-(
