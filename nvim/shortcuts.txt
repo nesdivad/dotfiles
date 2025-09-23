@@ -24,3 +24,11 @@ Switch between winbar tabs: < (go left), > (go right)
 - 'vi(': highlight parentheses group: Visual-inner-(
     - Can do with (, [, { and much else 
 - 'ci(': change parentheses group: Change-inner-(
+
+# Telescope
+
+- '<Leader>fs': Current buffer fuzzy find
+- '<Leader>fg': Live grep (with ripgrep)
+    - Install ripgrep: "https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation"
+- '<Leader>ff': Find files
+- '<Leader>fb': Open buffers

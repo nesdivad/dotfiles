@@ -14,7 +14,7 @@ vim.keymap.set(
 -- Telescope
 local t_builtins = require("telescope.builtin")
 vim.keymap.set(normal, "<leader>ff", t_builtins.find_files, { desc = "Telescope find_files" })
-vim.keymap.set(normal, "<leader>fg", t_builtins.grep_string, { desc = "Telescope grep_string" })
+vim.keymap.set(normal, "<leader>fg", t_builtins.live_grep, { desc = "Telescope grep_string" })
 vim.keymap.set(normal, "<leader>fb", t_builtins.buffers, { desc = "Telescope buffers" })
 vim.keymap.set(normal, "<leader>fh", t_builtins.help_tags, { desc = "Telescope help_tags" })
 vim.keymap.set(normal, "<leader>fo", t_builtins.oldfiles, { desc = "Telescope old_files" })
