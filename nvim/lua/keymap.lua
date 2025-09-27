@@ -19,3 +19,6 @@ vim.keymap.set(normal, "<leader>fb", t_builtins.buffers, { desc = "Telescope buf
 vim.keymap.set(normal, "<leader>fh", t_builtins.help_tags, { desc = "Telescope help_tags" })
 vim.keymap.set(normal, "<leader>fo", t_builtins.oldfiles, { desc = "Telescope old_files" })
 vim.keymap.set(normal, "<leader>fs", t_builtins.current_buffer_fuzzy_find, { desc = "Telescope current_buffer_fuzzy_find" })
+
+-- Lsp
+vim.keymap.set("n", "<leader>def", vim.lsp.buf.type_definition, {})
