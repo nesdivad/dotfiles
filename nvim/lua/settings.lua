@@ -13,7 +13,9 @@ vim.opt.splitright = true
 
 vim.opt.wrap = false
 vim.opt.clipboard = "unnamedplus"
-vim.opt.scrolloff = 999
+
+vim.opt.scrolloff = 15
+vim.opt.sidescrolloff = 5
 
 vim.opt.virtualedit = "block"
 vim.opt.inccommand = "split"
