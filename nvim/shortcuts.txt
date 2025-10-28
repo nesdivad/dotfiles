@@ -5,12 +5,6 @@ Change marked text in visual block mode: mark text, press c, and type new text
 
 Move text to new line: :m <number of lines> (-<number> for number of lines above, +<number> for number of lines below)
 
-Incremental selection:
-- init: '<Leader>ss'
-- increment node: '<Leader>si'
-- decrement node: '<Leader>sd'
-- increment scope: '<Leader>sc'
-
 Indent: '=%', indents scope(?)
 
 # Neotree
@@ -32,3 +26,9 @@ Switch between winbar tabs: < (go left), > (go right)
     - Install ripgrep: "https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation"
 - '<Leader>ff': Find files
 - '<Leader>fb': Open buffers
+
+# Conform
+
+- Install command line tool for each formatter through Mason or CLI tool.
+    - e.g. 'terraform' or 'stylua' from Mason
+
