@@ -8,7 +8,6 @@ return {
         opts = {},
         dependencies = {
             "mason-org/mason.nvim",
-            "mason-org/mason-lspconfig.nvim"
         },
         config = function()
             vim.lsp.config("*", {
@@ -17,14 +16,5 @@ return {
                 end
             })
         end
-    },
-    {
-        "mason-org/mason-lspconfig.nvim",
-        opts = {
-            ensure_installed = { "csharp_ls", "basedpyright" },
-        },
-        dependencies = {
-            "mason-org/mason.nvim",
-        },
     },
 }

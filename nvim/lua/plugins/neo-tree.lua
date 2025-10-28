@@ -10,7 +10,9 @@ return {
         lazy = false, -- neo-tree will lazily load itself
         opts = {
             sources = {
-                "filesystem", "buffers", "git_status",
+                "filesystem", 
+                "buffers", 
+                "git_status",
             },
             source_selector = {
                 winbar = true,
@@ -23,10 +25,10 @@ return {
                     { source = "git_status" },
                 }
             },
-            enable_git_status = true,
+            enable_git_status = false,
             enable_diagnostics = true,
             file_size = {
-                enabled = true
+                enabled = false
             },
             window = {
                 width = 30
@@ -54,7 +56,7 @@ return {
             },
             follow_current_file = {
                 enabled = true,
-                leave_dirs_open = false,
+                leave_dirs_open = true,
             }
         },
     }

@@ -4,7 +4,7 @@ return {
         opts = {},
         config = function()
             require("nvim-treesitter.configs").setup {
-                ensure_installed = { "c_sharp", "lua", "vim", "vimdoc", "query", "python" },
+                ensure_installed = { "lua", "vim", "vimdoc", "query", "python" },
                 auto_install = true,
                 highlight = {
                     enable = true,
@@ -18,29 +18,7 @@ return {
                         node_decremental = "<Leader>sd",
                     },
                 },
-                textobjects = {
-                    select = {
-                        enable = true,
-                        lookahead = true,
-                        keymaps = {
-                            ["af"] = "@function.outer",
-                            ["if"] = "@function.inner",
-                            ["ac"] = "@class.outer",
-                            ["ic"] = { query = "@class.inner", desc = "Select inner part of a class region" },
-                            ["as"] = { query = "@local.scope", query_group = "locals", desc = "Select language scope" },
-                            ["ib"] = "@block.inner",
-                            ["ob"] = "@block.outer",
-                        },
-                        selection_modes = {
-                            ['@parameter.outer'] = 'v', -- charwise
-                            ['@function.outer'] = 'V', -- linewise
-                            ['@class.outer'] = '<c-v>', -- blockwise
-                        },
-                        include_surrounding_whitespace = true,
-                    },
-                },
             }
         end
     },
-    { "nvim-treesitter/nvim-treesitter-textobjects" },
 }
