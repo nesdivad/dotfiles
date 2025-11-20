@@ -20,3 +20,4 @@ vim.keymap.set(normal, "<leader>fh", t_builtins.help_tags, { desc = "Telescope h
 vim.keymap.set(normal, "<leader>fo", t_builtins.oldfiles, { desc = "Telescope old_files" })
 vim.keymap.set(normal, "<leader>fs", t_builtins.current_buffer_fuzzy_find, { desc = "Telescope current_buffer_fuzzy_find" })
 
+

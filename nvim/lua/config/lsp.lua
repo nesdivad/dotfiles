@@ -4,6 +4,7 @@ local normal = "n"
 -- lsp locals
 local basedpyright = "basedpyright"
 local terraform = "terraformls"
+local csharpls = "csharp_ls"
 
 local on_attach = function(client, bufnr)
 	local opts = { noremap = true, silent = true }
@@ -31,6 +32,23 @@ lsp_config(terraform, {
 	},
 })
 
+lsp_config(csharpls, {
+	on_attach = function(client, bufnr)
+        local opts = { noremap = true, silent = true }
+        vim.keymap.set(normal, "gD", vim.lsp.buf.declaration, opts)
+        vim.keymap.set(normal, "gd", vim.lsp.buf.definition, opts)
+        vim.keymap.set(normal, "K", vim.lsp.buf.hover, opts)
+        vim.keymap.set(normal, "<leader>ca", vim.lsp.buf.code_action, opts)
+
+        local csharpls = require("telescope").load_extension("csharpls_definition")
+        vim.keymap.set(normal, "<leader>def", csharpls.csharpls_definition, {})
+    end,
+	settings = {
+		csharp_ls = {},
+	},
+})
+
 -- enable lsp
 vim.lsp.enable(basedpyright)
 vim.lsp.enable(terraform)
+vim.lsp.enable(csharpls)
