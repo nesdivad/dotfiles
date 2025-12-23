@@ -5,6 +5,7 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
+        version = "v2.5.0",
 		opts = {},
 		dependencies = {
 			"mason-org/mason.nvim",
