@@ -6,6 +6,8 @@ local basedpyright = "basedpyright"
 local terraform = "terraformls"
 local csharpls = "csharp_ls"
 local clangd = "clangd"
+local svelte = "svelte"
+local typescript = "ts_ls"
 
 local on_attach = function(client, bufnr)
 	local opts = { noremap = true, silent = true }
@@ -56,8 +58,40 @@ lsp_config(clangd, {
 	},
 })
 
+lsp_config(svelte, {
+	on_attach = on_attach,
+	settings = {
+        svelte = {
+            plugin = {
+                svelte = {
+                    format = { enable = true },
+                }
+            }
+        },
+	},
+})
+
+lsp_config(typescript, {
+    on_attach = on_attach,
+    settings = {
+        typescript = {
+            inlayHints = {
+                includeInlayParameterNameHints = "all",
+                includeInlayFunctionParameterTypeHints = true,
+            }
+        },
+        javascript = {
+            inlayHints = {
+                includeInlayParameterNameHints = "all",
+            }
+        }
+    }
+})
+
 -- enable lsp
 vim.lsp.enable(basedpyright)
 vim.lsp.enable(terraform)
 vim.lsp.enable(csharpls)
 vim.lsp.enable(clangd)
+vim.lsp.enable(svelte)
+vim.lsp.enable(typescript)
