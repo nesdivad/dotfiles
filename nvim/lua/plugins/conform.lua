@@ -10,6 +10,7 @@ return {
 			c = { "clang_format" },
 			cs = { "csharpier" },
 			["terraform-vars"] = { "terraform_fmt" },
+            lua = { "stylua" },
 		},
 	},
 }
