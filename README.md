@@ -1,6 +1,4 @@
 # dotfiles
 
-- dotfiles for my local development environment
-
 > [!WARNING]
-> *Disclaimer*: This repo is a work in progress, so you may encounter bugs in the configuration files or install scripts...
+> Moved to [codeberg.org/nesdivad/dotfiles](https://codeberg.org/nesdivad/dotfiles)
