@@ -95,7 +95,13 @@ lsp_config(typescript, {
 lsp_config(gopls, {
 	on_attach = on_attach,
 	settings = {
-		gopls = {},
+		gopls = {
+			analyses = {
+				unusedparams = true,
+			},
+			staticcheck = true,
+			gofumpt = true,
+		},
 	},
 })
 
