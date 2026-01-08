@@ -13,13 +13,22 @@ local typescript = "ts_ls"
 local gopls = "gopls"
 local luals = "lua_ls"
 
-local on_attach = function(_, _)
+local on_attach = function(client, bufnr)
 	local opts = { noremap = true, silent = true }
 	vim.keymap.set(normal, "gD", vim.lsp.buf.declaration, opts)
 	vim.keymap.set(normal, "gd", vim.lsp.buf.definition, opts)
 	vim.keymap.set(normal, "K", vim.lsp.buf.hover, opts)
 	vim.keymap.set(normal, "<leader>ca", vim.lsp.buf.code_action, opts)
 	vim.keymap.set(normal, "<leader>def", vim.lsp.buf.type_definition, opts)
+
+	if client.name == "gopls" then
+		vim.keymap.set(normal, "<leader>ee", "oif err != nil {\n\t\n}<esc>kf\r", {
+			noremap = true,
+			silent = true,
+			buffer = bufnr,
+			desc = "Go error check",
+		})
+	end
 end
 
 -- configure lsp
