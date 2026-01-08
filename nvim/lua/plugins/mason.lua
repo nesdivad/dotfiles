@@ -5,14 +5,14 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
-        version = "v2.5.0",
+		version = "v2.5.0",
 		opts = {},
 		dependencies = {
 			"mason-org/mason.nvim",
 		},
 		config = function()
 			vim.lsp.config("*", {
-				on_attach = function(client, bufnr)
+				on_attach = function(_, _)
 					vim.keymap.set("n", "<leader>ren", vim.lsp.buf.rename, {})
 				end,
 			})
