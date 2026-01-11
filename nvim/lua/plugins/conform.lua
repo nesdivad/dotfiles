@@ -4,7 +4,9 @@ return {
 	opts = {
 		formatters_by_ft = {
 			python = { "black" },
-			javascript = { "prettier" },
+			javascript = { "prettierd" },
+            typescript = { "prettierd" },
+            svelte = { "prettierd" },
 			terraform = { "terraform_fmt" },
 			c = { "clang_format" },
 			cs = { "csharpier" },
