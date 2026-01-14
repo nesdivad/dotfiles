@@ -22,7 +22,7 @@ local on_attach = function(client, bufnr)
 	vim.keymap.set(normal, "<leader>def", vim.lsp.buf.type_definition, opts)
 
 	if client.name == "gopls" then
-		vim.keymap.set(normal, "<leader>ee", "oif err != nil {\n\t\n}<esc>kf\r", {
+		vim.keymap.set(normal, "<leader>rr", "oif err != nil {\n\t\n}<esc>kf\r", {
 			noremap = true,
 			silent = true,
 			buffer = bufnr,

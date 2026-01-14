@@ -12,6 +12,7 @@ return {
 			cs = { "csharpier" },
 			["terraform-vars"] = { "terraform_fmt" },
 			lua = { "stylua" },
+            go = { "gofmt" },
 		},
 	},
 }
