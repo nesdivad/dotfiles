@@ -1,7 +1,12 @@
 return {
 	{
 		"mason-org/mason.nvim",
-		opts = {},
+        opts = {
+            registries = {
+                "github:mason-org/mason-registry",
+                "github:Crashdummyy/mason-registry",
+            },
+        },
 	},
 	{
 		"neovim/nvim-lspconfig",
@@ -11,11 +16,6 @@ return {
 			"mason-org/mason.nvim",
 		},
 		config = function()
-			vim.lsp.config("*", {
-				on_attach = function(_, _)
-					vim.keymap.set("n", "<leader>ren", vim.lsp.buf.rename, {})
-				end,
-			})
 		end,
 	},
 }
