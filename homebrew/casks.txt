@@ -1,5 +1,4 @@
 firefox
 ghostty
 the-unarchiver
-zed
-docker-desktop
+dotnet-sdk

@@ -1,18 +1,22 @@
 return {
-	{
-		"nvim-treesitter/nvim-treesitter",
+    -- config needs tree-sitter-cli: https://github.com/tree-sitter/tree-sitter/blob/master/crates/cli/README.md
+    {
+        'nvim-treesitter/nvim-treesitter',
+        lazy = false,
+        branch = "main",
+        build = ':TSUpdate',
         opts = {
-            ensure_installed = { 
-                "lua", "vim", "vimdoc", "query", 
-                "python", "html", "css", "c" 
-            },
-            auto_install = true,
-            highlight = {
-                enable = true,
-            },
-            indent = {
-                enable = true,
-            },
-        }
-	},
+            indent = { enable = true },
+            highlight = { enable = true },
+            folds = { enable = true },
+        },
+        config = function()
+            require("nvim-treesitter").install({
+                "javascript", "typescript", "svelte", "go", 
+                "c_sharp", "python", "bash", "dockerfile",
+                "html", "css", "lua", "markdown",
+                "sql", "terraform", "json"
+            })
+        end
+    }
 }

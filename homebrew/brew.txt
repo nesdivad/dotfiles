@@ -8,3 +8,4 @@ tmux
 uv
 docker
 ripgrep
+tree-sitter-cli
