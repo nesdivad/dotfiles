@@ -37,3 +37,5 @@ Switch between winbar tabs: < (go left), > (go right)
 
 - 'gcc': Comment out line
     - Combine with visual to comment multiple lines
+- ':ccl':
+    - Close quicklist

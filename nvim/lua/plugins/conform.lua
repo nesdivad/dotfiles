@@ -5,14 +5,13 @@ return {
 		formatters_by_ft = {
 			python = { "black" },
 			javascript = { "prettierd" },
-            typescript = { "prettierd" },
-            svelte = { "prettierd" },
+			typescript = { "prettierd" },
+			svelte = { "prettierd" },
 			terraform = { "terraform_fmt" },
 			c = { "clang_format" },
-			cs = { "csharpier" },
 			["terraform-vars"] = { "terraform_fmt" },
 			lua = { "stylua" },
-            go = { "gofmt" },
+			go = { "gofmt" },
 		},
 	},
 }
