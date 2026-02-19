@@ -11,11 +11,18 @@ return {
 			folds = { enable = true },
 		},
 		config = function()
+			require("nvim-treesitter").setup({
+				install_dir = vim.fn.stdpath("data") .. "/site",
+			})
+
 			require("nvim-treesitter").install({
 				"javascript",
 				"typescript",
 				"svelte",
 				"go",
+				"gomod",
+				"gosum",
+				"gowork",
 				"c_sharp",
 				"python",
 				"bash",
