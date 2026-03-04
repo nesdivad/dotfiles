@@ -31,9 +31,30 @@ vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { 
 vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-pcall(function()
-	capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
-end)
+
+local function with_completion_capabilities(base_capabilities)
+	local ok_blink, blink = pcall(require, "blink.cmp")
+	if ok_blink and type(blink) == "table" then
+		if type(blink.get_lsp_capabilities) == "function" then
+			return blink.get_lsp_capabilities(base_capabilities)
+		end
+		if type(blink.get_lsp_capability) == "function" then
+			return blink.get_lsp_capability(base_capabilities)
+		end
+		if type(blink.capabilities) == "function" then
+			return blink.capabilities(base_capabilities)
+		end
+	end
+
+	local ok_cmp, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+	if ok_cmp and type(cmp_nvim_lsp.default_capabilities) == "function" then
+		return cmp_nvim_lsp.default_capabilities(base_capabilities)
+	end
+
+	return base_capabilities
+end
+
+capabilities = with_completion_capabilities(capabilities)
 
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(args)

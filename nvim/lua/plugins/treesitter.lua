@@ -6,14 +6,10 @@ return {
 		commit = "19c729dae6e0eeb79423df0cf37780aa9a7cc3b7",
 		build = ":TSUpdate",
 		opts = {
-			indent = { enable = true },
-			highlight = { enable = true },
-			folds = { enable = true },
+			install_dir = vim.fn.stdpath("data") .. "/site",
 		},
-		config = function()
-			require("nvim-treesitter").setup({
-				install_dir = vim.fn.stdpath("data") .. "/site",
-			})
+		config = function(_, opts)
+			require("nvim-treesitter").setup(opts)
 
 			require("nvim-treesitter").install({
 				"javascript",

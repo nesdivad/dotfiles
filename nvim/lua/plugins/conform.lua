@@ -2,6 +2,7 @@ return {
 	"stevearc/conform.nvim",
 	version = "v9.1.0",
 	opts = {
+		notify_on_error = false,
 		formatters_by_ft = {
 			python = { "black" },
 			javascript = { "prettierd" },
