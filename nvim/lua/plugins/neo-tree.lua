@@ -25,7 +25,7 @@ return {
 					{ source = "git_status" },
 				},
 			},
-			enable_git_status = false,
+			enable_git_status = true,
 			enable_diagnostics = true,
 			file_size = {
 				enabled = false,
@@ -42,6 +42,13 @@ return {
 				},
 			},
 			filesystem = {
+				sort_function = function(a, b)
+					if a.type == b.type then
+						return a.path < b.path
+					else
+						return a.type == "directory"
+					end
+				end,
 				filtered_items = {
 					visible = true,
 					hide_dotfiles = false,
@@ -53,10 +60,10 @@ return {
 						".env*",
 					},
 				},
-			},
-			follow_current_file = {
-				enabled = true,
-				leave_dirs_open = true,
+				follow_current_file = {
+					enabled = true,
+					leave_dirs_open = true,
+				},
 			},
 		},
 	},

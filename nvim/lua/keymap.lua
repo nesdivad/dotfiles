@@ -1,7 +1,7 @@
 local normal = "n"
 
 -- Neo-tree
-vim.keymap.set(normal, "<leader>e", "<CMD>Neotree<CR>")
+vim.keymap.set(normal, "<leader>e", "<CMD>Neotree toggle reveal<CR>")
 
 -- Diagnostics
 vim.keymap.set(normal, "<leader>cd", vim.diagnostic.open_float, { desc = "Open diagnostics window" })
