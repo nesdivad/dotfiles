@@ -14,6 +14,7 @@ return {
 			require("nvim-treesitter").install({
 				"javascript",
 				"typescript",
+				"tsx",
 				"svelte",
 				"go",
 				"gomod",
