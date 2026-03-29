@@ -1,9 +1,6 @@
-return {
-	"seblyng/roslyn.nvim",
-	---@module 'roslyn.config'
-	---@type RoslynNvimConfig
-	opts = {
-		-- your configuration comes here; leave empty for default settings
-	},
-	commit = "2b9a8366a29b0a2a7e51cac87f3ca6345f617790",
-}
+vim.pack.add({
+    {
+        src = "https://github.com/seblyng/roslyn.nvim",
+        version = "ff43201090361b8936e008a006473b59ef2c0ca6"
+    }
+})

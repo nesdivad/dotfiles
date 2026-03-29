@@ -1,38 +1,32 @@
-return {
-	-- config needs tree-sitter-cli: https://github.com/tree-sitter/tree-sitter/blob/master/crates/cli/README.md
+vim.pack.add({
 	{
-		"nvim-treesitter/nvim-treesitter",
-		lazy = false,
-		commit = "19c729dae6e0eeb79423df0cf37780aa9a7cc3b7",
-		build = ":TSUpdate",
-		opts = {
-			install_dir = vim.fn.stdpath("data") .. "/site",
-		},
-		config = function(_, opts)
-			require("nvim-treesitter").setup(opts)
-
-			require("nvim-treesitter").install({
-				"javascript",
-				"typescript",
-				"tsx",
-				"svelte",
-				"go",
-				"gomod",
-				"gosum",
-				"gowork",
-				"c_sharp",
-				"python",
-				"bash",
-				"dockerfile",
-				"html",
-				"css",
-				"lua",
-				"markdown",
-				"sql",
-				"terraform",
-				"json",
-				"razor",
-			})
-		end,
+		src = "https://github.com/nvim-treesitter/nvim-treesitter",
+		version = "7caec274fd19c12b55902a5b795100d21531391f",
 	},
-}
+})
+require("nvim-treesitter").setup({
+	install_dir = vim.fn.stdpath("data") .. "/site",
+})
+
+require("nvim-treesitter").install({
+	"javascript",
+	"typescript",
+	"tsx",
+	"svelte",
+	"go",
+	"gomod",
+	"gosum",
+	"gowork",
+	"c_sharp",
+	"python",
+	"bash",
+	"dockerfile",
+	"html",
+	"css",
+	"lua",
+	"markdown",
+	"sql",
+	"terraform",
+	"json",
+	"razor",
+})

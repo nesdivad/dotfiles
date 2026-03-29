@@ -1,21 +1,11 @@
-return {
-	{
-		"mason-org/mason.nvim",
-        opts = {
-            registries = {
-                "github:mason-org/mason-registry",
-                "github:Crashdummyy/mason-registry",
-            },
-        },
-	},
-	{
-		"neovim/nvim-lspconfig",
-		version = "v2.5.0",
-		opts = {},
-		dependencies = {
-			"mason-org/mason.nvim",
-		},
-		config = function()
-		end,
-	},
-}
+vim.pack.add({
+    { src = "https://github.com/neovim/nvim-lspconfig", version = "v2.5.0" },
+    { src = "https://github.com/mason-org/mason.nvim" }
+})
+
+require("mason").setup({
+    registries = {
+        "github:mason-org/mason-registry",
+        "github:Crashdummyy/mason-registry",
+    }
+})
