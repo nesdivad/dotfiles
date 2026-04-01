@@ -5,8 +5,6 @@ vim.pack.add({
 require("conform").setup({
     formatters_by_ft = {
         python = { "black" },
-        javascript = { "prettierd" },
-        typescript = { "prettierd" },
         svelte = { "prettierd" },
         terraform = { "terraform_fmt" },
         c = { "clang_format" },
