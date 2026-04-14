@@ -4,3 +4,7 @@ vim.pack.add({
         version = "ff43201090361b8936e008a006473b59ef2c0ca6"
     }
 })
+
+require("roslyn").setup({
+    filewatching = "auto",
+})

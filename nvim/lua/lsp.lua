@@ -109,10 +109,10 @@ lsp_config(roslyn, {
             csharp_enable_inlay_hints_for_lambda_parameter_types = true,
             dotnet_enable_inlay_hints_for_literal_parameters = true,
             dotnet_enable_inlay_hints_for_indexer_parameters = true,
-            dotnet_enable_tests_code_lens = true,
         },
         ["csharp|code_lens"] = {
             dotnet_enable_references_code_lens = true,
+            dotnet_enable_tests_code_lens = true,
         },
         ["csharp|analysis"] = {
             dotnet_analyzer_diagnostics_scope = "fullSolution",
@@ -122,6 +122,9 @@ lsp_config(roslyn, {
             dotnet_show_completion_items_from_unimported_namespaces = true,
             dotnet_provide_regex_completions = true,
         },
+        ["csharp|formatting"] = {
+            dotnet_organize_imports_on_format = false,
+        }
     },
 })
 
