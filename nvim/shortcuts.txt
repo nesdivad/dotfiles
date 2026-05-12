@@ -28,11 +28,6 @@ Switch between winbar tabs: < (go left), > (go right)
 - '<Leader>fb': Open buffers
 - '<Leader>fo': Latest opened files
 
-# Conform
-
-- Install command line tool for each formatter through Mason or CLI tool.
-    - e.g. 'terraform' or 'stylua' from Mason
-
 # Misc.
 
 - 'gcc': Comment out line

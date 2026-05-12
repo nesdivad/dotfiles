@@ -1,2 +1,2 @@
-vim.pack.add({ "https://github.com/EdenEast/nightfox.nvim" })
-vim.cmd.colorscheme("nightfox")
+vim.pack.add({ "https://github.com/catppuccin/nvim" })
+vim.cmd.colorscheme("catppuccin-macchiato")

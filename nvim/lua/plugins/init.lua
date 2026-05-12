@@ -2,7 +2,6 @@ require("plugins.autopairs")
 require("plugins.theme")
 require("plugins.cmp")
 require("plugins.fzf")
-require("plugins.conform")
 
 require("plugins.plenary")
 require("plugins.nui")
