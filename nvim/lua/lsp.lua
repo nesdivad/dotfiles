@@ -11,6 +11,7 @@ local typescript = "ts_ls"
 local gopls = "gopls"
 local luals = "lua_ls"
 local roslyn = "roslyn"
+local sourcekit = "sourcekit"
 
 vim.diagnostic.config({
     underline = true,
@@ -208,3 +209,16 @@ vim.lsp.enable(typescript)
 vim.lsp.enable(gopls)
 vim.lsp.enable(luals)
 vim.lsp.enable(roslyn)
+
+-- macosx-specific config
+local is_macosx = vim.fn.has("mac") == 1
+if is_macosx then
+    lsp_config(sourcekit, {
+        capabilities = capabilities,
+        cmd = { "xcrun", "sourcekit-lsp" },
+    })
+    vim.lsp.enable(sourcekit)
+
+    -- xcode-build-server config -project DittProsjekt.xcodeproj -scheme DittScheme
+end
+

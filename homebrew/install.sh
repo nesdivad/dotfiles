@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 # Run the following command to find top-level packages for brew: 'brew leaves'
 # And to insert the list directly into 'brew.txt': 'brew leaves > brew.txt'

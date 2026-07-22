@@ -10,3 +10,5 @@ docker
 ripgrep
 tree-sitter-cli
 fzf
+xcode-build-server
+minikube

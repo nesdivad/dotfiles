@@ -1,4 +1,4 @@
 firefox
 ghostty
-the-unarchiver
-dotnet-sdk
+docker-desktop
+cloudflare-warp
