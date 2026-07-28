@@ -213,8 +213,19 @@ vim.lsp.enable(roslyn)
 -- macosx-specific config
 local is_macosx = vim.fn.has("mac") == 1
 if is_macosx then
+    local sourcekit_capabilities =
+    require("blink.cmp").get_lsp_capabilities({
+        textDocument = {
+            completion = {
+                completionItem = {
+                    snippetSupport = false,
+                },
+            },
+        },
+    })
+
     lsp_config(sourcekit, {
-        capabilities = capabilities,
+        capabilities = sourcekit_capabilities,
         cmd = { "xcrun", "sourcekit-lsp" },
     })
     vim.lsp.enable(sourcekit)
