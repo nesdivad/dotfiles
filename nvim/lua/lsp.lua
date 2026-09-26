@@ -115,9 +115,9 @@ lsp_config(roslyn, {
             dotnet_enable_references_code_lens = true,
             dotnet_enable_tests_code_lens = true,
         },
-        ["csharp|analysis"] = {
-            dotnet_analyzer_diagnostics_scope = "fullSolution",
-            dotnet_compiler_diagnostics_scope = "fullSolution",
+        ["csharp|background_analysis"] = {
+            ["background_analysis.dotnet_analyzer_diagnostics_scope"] = "fullSolution",
+            ["background_analysis.dotnet_compiler_diagnostics_scope"] = "fullSolution",
         },
         ["csharp|completion"] = {
             dotnet_show_completion_items_from_unimported_namespaces = true,
@@ -232,4 +232,3 @@ if is_macosx then
 
     -- xcode-build-server config -project DittProsjekt.xcodeproj -scheme DittScheme
 end
-
