@@ -1,5 +1,4 @@
 require("plugins.autopairs")
-require("plugins.theme")
 require("plugins.cmp")
 require("plugins.fzf")
 

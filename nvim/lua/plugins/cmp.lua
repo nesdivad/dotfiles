@@ -24,7 +24,7 @@ require("blink.cmp").setup({
     completion = {
         documentation = { auto_show = true },
         list = {
-            max_items = 200,
+            max_items = 100,
             selection = {
                 preselect = true,
                 auto_insert = true,

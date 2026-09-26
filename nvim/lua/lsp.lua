@@ -82,6 +82,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
         map("n", "<leader>ca", vim.lsp.buf.code_action, "LSP: Code action")
         map("n", "<leader>rn", vim.lsp.buf.rename, "LSP: Rename")
         map("n", "<leader>ss", vim.lsp.buf.workspace_symbol, "LSP: Symbol search")
+        map("n", "<leader>ic", vim.lsp.buf.incoming_calls, "LSP: List call sites")
+        map("n", "<leader>oc", vim.lsp.buf.outgoing_calls, "LSP: List outgoing calls")
 
         map("n", "<leader>ih", function()
             local enabled = vim.lsp.inlay_hint.is_enabled({ bufnr = bufnr })

@@ -13,6 +13,14 @@ Switch between winbar tabs: < (go left), > (go right)
 # Macros
 - '@o': Insert newline, exit insert mode and go one line up
 
+# Deleting text
+
+- 'dab': Delete block ( ... )
+- 'dib': Delete inner block (<...>)
+- 'daB': Delete block { ... }
+- 'diB': Delete inner block { <...> }
+
+
 # Visual mode
 
 - 'vi(': highlight parentheses group: Visual-inner-(
