@@ -11,6 +11,7 @@ vim.keymap.set("n", "<leader>fg", fzf.live_grep, { desc = "Fzf live grep" })
 vim.keymap.set("n", "<leader>fb", fzf.buffers, { desc = "Fzf buffers" })
 vim.keymap.set("n", "<leader>fh", fzf.helptags, { desc = "Fzf help tags" })
 vim.keymap.set("n", "<leader>fo", fzf.oldfiles, { desc = "Fzf old files" })
+vim.keymap.set("n", "<leader>fc", fzf.grep_cword, { desc = "Fzf search word under cursor" })
 
 -- trigger InsertLeave events
 vim.keymap.set("i", "<C-c>", "<Esc>")

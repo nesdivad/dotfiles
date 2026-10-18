@@ -7,7 +7,7 @@ vim.o.background = "dark"
 vim.g.colors_name = "rust"
 
 local c = {
-  bg        = "#1a1715",
+  bg        = "#1b1715",
   bg_panel  = "#221e1b",
   bg_select = "#332c26",
   fg        = "#e8e0d5",
@@ -15,24 +15,25 @@ local c = {
   accent    = "#da7756",
   accent2   = "#e59a6f",
   rust      = "#b8896a",
-  rust_light = "#c38b80", 
-  rust_dim   = "#9c745a", 
-  rust_gold  = "#b8966a", 
-  rust_warm  = "#b86f6a", 
+  rust_light = "#c38b80",
+  rust_dim   = "#9c745a",
+  rust_gold  = "#b8966a",
+  rust_warm  = "#b86f6a",
   sand      = "#c9a876",
-  orange    = "#fab387",  
+  orange    = "#fab387",
   darkblue = "#5a84ad",
-  blue        = "#6a9bcc", 
-  blue_light  = "#97b9db", 
-  blue_dim    = "#5a84ad", 
-  blue_cyan   = "#6abccc", 
-  green     = "#788c5d", 
+  blue        = "#6a9bcc",
+  blue_light  = "#97b9db",
+  blue_dim    = "#5a84ad",
+  blue_cyan   = "#6abccc",
+  green     = "#788c5d",
+  green_light = "#8c9d75",
   error     = "#c75c4a",
   purple = "#6a7acc",
-  yellow       = "#e0c074", 
-  yellow_light = "#e5c989", 
-  yellow_pale  = "#e9d39e", 
-  yellow_dim   = "#bea363", 
+  yellow       = "#e0c074",
+  yellow_light = "#e5c989",
+  yellow_pale  = "#e9d39e",
+  yellow_dim   = "#bea363",
 }
 
 local hl = vim.api.nvim_set_hl
@@ -102,15 +103,15 @@ hl(0, "LspReferenceWrite", { bg = c.bg_panel })
 hl(0, "LspInlayHint", { fg = "#9399b2", italic = true })
 
 -- neo-tree
-hl(0, "NeoTreeDirectoryIcon", { fg = c.accent })
-hl(0, "NeoTreeDirectoryName", { fg = c.accent })
+hl(0, "NeoTreeDirectoryIcon", { fg = c.blue_cyan })
+hl(0, "NeoTreeDirectoryName", { fg = c.fg })
 hl(0, "NeoTreeBufferNumber", { fg = c.fg })
 hl(0, "NeoTreeFileName",      { fg = c.fg })
 hl(0, "NeoTreeRootName",      { fg = c.accent2, bold = true })
-hl(0, "NeoTreeGitAdded",      { fg = c.green })
+hl(0, "NeoTreeGitAdded",      { fg = c.green_light })
 hl(0, "NeoTreeGitModified",   { fg = c.yellow })
 hl(0, "NeoTreeGitUnstaged",   { fg = c.yellow })
-hl(0, "NeoTreeGitUntracked",   { fg = c.blue_cyan })
+hl(0, "NeoTreeGitUntracked",   { fg = c.accent })
 hl(0, "NeoTreeGitDeleted",    { fg = c.error })
 hl(0, "NeoTreeIndentMarker",  { fg = c.bg_panel })
 hl(0, "NeoTreeGitIgnored",  { fg = c.comment })
@@ -124,9 +125,9 @@ hl(0, "StatusLine",   { fg = c.fg, bg = c.bg_panel })
 hl(0, "StatusLineNC", { fg = c.comment, bg = c.bg_panel })
 hl(0, "WinBar",   { fg = c.comment, bg = c.bg })
 hl(0, "WinBarNC", { fg = c.comment, bg = c.bg })
-hl(0, "MsgArea",      { fg = c.fg, bg = c.bg_panel })     
+hl(0, "MsgArea",      { fg = c.fg, bg = c.bg_panel })
 hl(0, "MsgSeparator",  { fg = c.comment, bg = c.bg_panel })
-hl(0, "Question",     { fg = c.accent2, bold = true })      
+hl(0, "Question",     { fg = c.accent2, bold = true })
 
 -- LSP semantic tokens (roslyn.nvim / C#)
 hl(0, "@lsp.type.class",         { fg = c.yellow })
@@ -143,12 +144,13 @@ hl(0, "@lsp.type.delegate",      { fg = c.rust_light })
 hl(0, "@lsp.type.function",      { fg = c.accent2 })
 hl(0, "@lsp.type.keyword",       { fg = c.accent, italic = true })
 hl(0, "@lsp.type.macro",         { fg = c.accent })
-hl(0, "@lsp.type.decorator",     { fg = c.accent }) -- attributter, f.eks. [Fact]
+hl(0, "@lsp.type.decorator",     { fg = c.accent })
 hl(0, "@lsp.type.variable",      { fg = c.blue_light })
 hl(0, "@lsp.type.parameter",     { fg = c.blue_cyan, italic = true })
-hl(0, "@lsp.type.field",         { fg = c.blue_dim })
+hl(0, "@lsp.type.field",         { fg = c.blue_light  })
 hl(0, "@lsp.type.property",      { fg = c.blue })
 hl(0, "@lsp.type.string",        { fg = c.green })
+hl(0, "@lsp.type.stringEscapeCharacter", { fg = c.yellow })
 
 -- Modifiers (kombineres med typen over)
 hl(0, "@lsp.mod.readonly",  { italic = true })
