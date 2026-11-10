@@ -104,6 +104,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 -- https://github.com/seblyng/roslyn.nvim?tab=readme-ov-file
 lsp_config(roslyn, {
     capabilities = capabilities,
+    extensions = { razor = { enabled = false } },
     settings = {
         ["csharp|inlay_hints"] = {
             csharp_enable_inlay_hints_for_implicit_object_creation = false,
