@@ -3,12 +3,10 @@ go
 jq
 neovim
 node
-python@3.13
+python@3.14
 tmux
 uv
 docker
 ripgrep
 tree-sitter-cli
 fzf
-xcode-build-server
-minikube
