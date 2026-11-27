@@ -1,7 +1,7 @@
 require("settings")
-require("config.lazy")
+require("plugins")
 require("keymap")
-require("theme")
-require("autocmd")
-require("config.lsp")
+require("lsp")
+require("treesitter")
 
+vim.cmd.colorscheme("orange")

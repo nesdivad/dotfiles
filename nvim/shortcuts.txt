@@ -10,25 +10,114 @@ Indent: '=%', indents scope(?)
 # Neotree
 Switch between winbar tabs: < (go left), > (go right)
 
-# Macros
-- '@o': Insert newline, exit insert mode and go one line up
+# Deleting text
+
+- 'dab': Delete block ( ... )
+- 'dib': Delete inner block (<...>)
+- 'daB': Delete block { ... }
+- 'diB': Delete inner block { <...> }
 
 # Visual mode
 
-- 'vi(': highlight parentheses group: Visual-inner-(
-    - Can do with (, [, { and much else 
-- 'ci(': change parentheses group: Change-inner-(
+## Start selection
 
-# Telescope
+- 'v': Character-wise, 'V': line-wise, 'Ctrl+q': block-wise
+- 'gv': Reselect last visual selection
+- 'o': Jump to the other end of the selection (adjust the start). 'O' in block mode jumps horizontally
+
+## Extend selection with motions
+
+Any motion extends the selection in visual mode:
+
+- 'vf<char>': Select up to and including next <char> (e.g. 'vf;')
+- 'vt<char>': Select up to (not including) next <char> (e.g. 'vt)')
+- 'F<char>' / 'T<char>': Same, but backwards
+- ';' / ',': Repeat last f/t forwards / backwards
+- '/<pattern><CR>': Select up to next match
+- '%': Extend to matching bracket
+- '}' / '{': Extend to next / previous blank line (paragraph)
+- 'G' / 'gg': Extend to end / start of file
+- '$': Extend to end of line
+
+## Text objects
+
+- 'iw' / 'aw': Inner word / word with surrounding space
+- 'ip' / 'ap': Inner paragraph / paragraph with surrounding blank line
+- 'i"' / 'a"': Inside quotes / including quotes (also ', `)
+- 'ib' / 'ab': Same as i( / a(
+- 'iB' / 'aB': Same as i{ / a{
+- 'it' / 'at': Inside / around HTML/XML tag
+- Repeat 'ib', 'i"' etc. to expand to the next surrounding level
+
+## Editing the selection
+
+- 'd', 'c', 'y': Delete, change, yank
+- 'p': Paste over selection (overwrites the register with the replaced text)
+- 'P': Paste over selection without overwriting the register
+- 'r<char>': Replace every selected character with <char>
+- '~': Toggle case, 'u': lowercase, 'U': uppercase
+- '>' / '<': Indent / unindent (use '.' to repeat, or '3>' for multiple levels)
+- '=': Auto-indent selection
+- 'J': Join selected lines (gJ: without inserting space)
+- 'gq': Reformat/wrap selected lines
+- 'gc': Comment out selection
+
+## Block mode (Ctrl+v)
+
+- 'I': Insert at start of every line in block (press Esc to apply)
+- 'A': Append after the block on every line
+- '$A': Append at end of every line, even if they have different lengths
+- 'c': Change marked text on all lines
+
+## Commands on selection
+
+Pressing ':' in visual mode fills in ":'<,'>" automatically:
+
+- ":s/old/new/g": Search and replace only inside selection
+- ":normal A;": Run a normal-mode command on every selected line (here: append ;)
+- ":sort": Sort selected lines
+- ":!<cmd>": Pipe selection through shell command (e.g. ':!jq .')
+- 'g Ctrl+a': Turn a column of identical numbers into an increasing sequence
+- 'Ctrl+a' / 'Ctrl+x': Increment / decrement numbers in selection
+
+# Fzf
 
 - '<Leader>fs': Current buffer fuzzy find
 - '<Leader>fg': Live grep (with ripgrep)
     - Install ripgrep: "https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation"
 - '<Leader>ff': Find files
 - '<Leader>fb': Open buffers
+- '<Leader>fo': Latest opened files
+- '<Leader>fh': Help tags
+- '<Leader>fc': Grep current word
 
-# Conform
+# LSP
 
-- Install command line tool for each formatter through Mason or CLI tool.
-    - e.g. 'terraform' or 'stylua' from Mason
+## Navigation
 
+- 'gD': Go to declaration
+- 'gd': Go to definition
+- 'gt': Go to type definition
+- 'gi': Go to implementation
+- 'gr': List references
+
+## Docs
+
+- 'K': Hover docs (normal mode)
+- '<C-k>': Signature help (insert mode)
+
+## Actions
+
+- '<Leader>ca': Code action
+- '<Leader>rn': Rename symbol
+- '<Leader>ss': Workspace symbol search
+- '<Leader>ic': List incoming calls (call sites)
+- '<Leader>oc': List outgoing calls
+- '<Leader>ih': Toggle inlay hints (current buffer)
+
+# Misc.
+
+- 'gcc': Comment out line
+    - Combine with visual to comment multiple lines
+- ':ccl':
+    - Close quicklist

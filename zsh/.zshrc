@@ -17,3 +17,4 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+alias python=python3
